@@ -66,3 +66,7 @@ INSERT INTO subfields (id, field_id, name, percentage) VALUES
 (19, 5, 'Web Design', 80),
 (20, 5, 'CSS', 78),
 (25, 5, 'Tail wind', 78);
+
+
+ALTER USER 'root' IDENTIFIED WITH mysql_native_password BY 'salah123'; 
+flush privileges;
