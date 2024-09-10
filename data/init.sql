@@ -68,5 +68,9 @@ INSERT INTO subfields (id, field_id, name, percentage) VALUES
 (25, 5, 'Tail wind', 78);
 
 
+<<<<<<< HEAD
 ALTER USER 'root' IDENTIFIED WITH mysql_native_password BY 'root'; 
+=======
+ALTER USER 'root' IDENTIFIED WITH mysql_native_password BY 'salah123'; 
+>>>>>>> adb54085371c460836e5dd6f5b36e08bf6b3bbc0
 flush privileges;

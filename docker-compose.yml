@@ -3,7 +3,11 @@ services:
   db:
     build: ./data
     environment:
+<<<<<<< HEAD
       MYSQL_ROOT_PASSWORD: root
+=======
+      MYSQL_ROOT_PASSWORD: password
+>>>>>>> adb54085371c460836e5dd6f5b36e08bf6b3bbc0
       MYSQL_DATABASE: web_data
     restart: always
   web:
@@ -11,10 +15,17 @@ services:
     environment:
       MYSQL_DATABASE: web_data
       MYSQL_USER: root
+<<<<<<< HEAD
       MYSQL_PASSWORD: root
       MYSQL_HOST: db
     ports:
       - "5000:443"
+=======
+      MYSQL_PASSWORD: salah123
+      MYSQL_HOST: db
+    ports:
+      - "5000:5000"
+>>>>>>> adb54085371c460836e5dd6f5b36e08bf6b3bbc0
     depends_on:
       - db
     restart: on-failure

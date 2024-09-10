@@ -33,7 +33,11 @@ router.get('/blog', async (req, res) => {
       const delay = 2000
       const data = await fetchData();  // Fetch the data from the database
       setTimeout(() => {
+<<<<<<< HEAD
       res.json(data);  // Send the JSON response to the client
+=======
+      res.json(data.fields);  // Send the JSON response to the client
+>>>>>>> adb54085371c460836e5dd6f5b36e08bf6b3bbc0
     }, delay);
     } catch (err) {
       res.status(500).json({ error: 'Internal Server Error' });
@@ -53,14 +57,22 @@ router.get('/blog', async (req, res) => {
   
       // Fetch blog data from the database
       const blogData = await fetchBlogData();
+<<<<<<< HEAD
      
+=======
+  
+>>>>>>> adb54085371c460836e5dd6f5b36e08bf6b3bbc0
       // Check for errors in fetching blog data
       if (blogData.error) {
         return res.status(500).json({ error: 'Internal Server Error' });
       }
   
       // Filter blog entries based on the provided ID
+<<<<<<< HEAD
       const blog = blogData.data.blog.filter(item => item.id === idInt);
+=======
+      const blog = blogData.blog.filter(item => item.id === idInt);
+>>>>>>> adb54085371c460836e5dd6f5b36e08bf6b3bbc0
   
       // Check if the blog entry was found
       if (blog.length === 0) {
